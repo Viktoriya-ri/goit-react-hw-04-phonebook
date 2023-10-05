@@ -1,20 +1,19 @@
-import React from 'react';
-import { Input } from './Filter.styled'
 
-function Filter({ filter, setFilter }) {
-  const handleFilterChange = (event) => {
-    setFilter(event.target.value);
-  };
+import {Input,Wrapper,Title} from './Filter.styled';
 
+const Filter = ({ filter, onChange }) => {
   return (
-    <Input
-      type="text"
-      name="filter"
-      placeholder="Search by name"
-      value={filter}
-      onChange={handleFilterChange}
-    />
+    <Wrapper>
+      <Title>Find contacts by name</Title>
+      <Input
+        type="text"
+        name="filter"
+        placeholder="Who are you looking for?.."
+        value={filter}
+        onChange={onChange}
+      />
+    </Wrapper>
   );
-}
+};
 
-export default Filter
+export default Filter;

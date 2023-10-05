@@ -1,15 +1,15 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import 'normalize.css';
 
-export const Container = styled.div`
+export const MainContainer = styled.div`
   width: 600px;
   padding: 15px;
-  margin: 60px auto;
+  margin: 0 auto;
   display: grid;
   place-items: center;
 `;
 
-
-export const Title = styled.h1`
+export const MainTitle = styled.h1`
 position:relative;
   font-size: 44px;
   font-weight: 700;
@@ -19,7 +19,7 @@ position:relative;
   white-space: nowrap;
   padding-bottom: 13px;
 
-  :before {
+  &:before {
     background-color: #7F00FF;
     content: '';
     display: block;
@@ -28,7 +28,7 @@ position:relative;
     margin-bottom: 5px;
   }
 
-  :after {
+  &:after {
     background-color: #7F00FF;
     content: '';
     display: block;
@@ -39,7 +39,7 @@ position:relative;
   }
 `;
 
-export const Heading2 = styled.h2`
+export const SecondaryTitle = styled.h1`
   font-size: 32px;
   font-weight: 600;
   text-align: center;

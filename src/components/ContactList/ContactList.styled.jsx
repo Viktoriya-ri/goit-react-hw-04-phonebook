@@ -1,29 +1,23 @@
-import styled from 'styled-components';
+import styled from "@emotion/styled";
+
+export const Contact = styled.p`
+
+font-size:20px;
+
+`
+
+export const Tel = Contact.withComponent('number');
+
+export const Wrapper = styled.div`
+
+display:flex;
+gap:10px;
+align-items:center;
+`
 
 
-export const ContactItems = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-`;
+export const Delete = styled.div`
 
-export const ContactName = styled.span`
+cursor:pointer;
 
-  margin-right: 10px;
-`;
-
-export const ContactNumber = styled.span`
-  /* flex: 1; */
-`;
-
-export const Button = styled.button`
-  padding: 5px 20px;
-  margin-left: 20px;
-  font-size: 14px;
-  border-radius: 6px;
-  border: 1px solid;
-    :hover {
-    background-color: #e0e0e0;
-  }
-`;
+`

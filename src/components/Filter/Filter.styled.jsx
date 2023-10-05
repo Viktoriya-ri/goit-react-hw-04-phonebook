@@ -1,11 +1,21 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
+export const Wrapper = styled.div`
+width:100%;
+`
 export const Input = styled.input`
-  padding: 5px;
-  /* margin-bottom: 10px; */
-  border-radius: 6px;
-  border: none;
-  outline: 0;
-  background-color: #fff;
-  box-shadow: 0 1px 6px 0 #20212447;
-`;
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+ box-sizing: border-box;
+
+`
+
+export const Title = styled.h3`
+
+text-align:center;
+`

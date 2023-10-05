@@ -1,34 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ContactItems, ContactName, ContactNumber, Button } from './ContactList.styled'
+import {Wrapper,Contact,Tel,Delete} from "./ContactList.styled"
+import { AiFillDelete } from 'react-icons/ai';
+import { FcBusinessContact } from 'react-icons/fc';
+import { BsTelephoneOutbound } from 'react-icons/bs';
 
-function ContactList({ contacts, deleteContact }) {
-  return (
-    <ul>
-      {contacts.map((contact) => (
-        <ContactItem key={contact.id} contact={contact} deleteContact={deleteContact} />
-      ))}
-    </ul>
-  );
+const ItemContact = ({contact,number,onDelete}) => {
+
+ return (
+
+    <>
+<Wrapper>
+  <FcBusinessContact size={20} />
+  <Contact> {contact}</Contact>
+</Wrapper>
+<Wrapper>
+  <BsTelephoneOutbound size={20} />
+  <Tel>{number}</Tel>
+</Wrapper>
+<Delete role="button" aria-label="Delete" onClick={onDelete}>
+  <AiFillDelete size={20} />
+</Delete>
+</>
+)
 }
 
-function ContactItem({ contact, deleteContact }) {
-  const handleDelete = () => {
-    deleteContact(contact.id);
-  };
 
-  return (
-    <ContactItems>
-      <ContactName>{contact.name}</ContactName>
-      <ContactNumber>{contact.number}</ContactNumber>
-      <Button onClick={handleDelete}>Delete</Button>
-    </ContactItems>
-  );
-}
-
-ContactItem.propTypes = {
-  contact: PropTypes.object.isRequired,
-  deleteContact: PropTypes.func.isRequired,
-};
-
-export default ContactList
+export default ItemContact;
